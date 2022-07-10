@@ -4,7 +4,7 @@ services:
     container_name: strapi
     build:
       context: "./strapi"
-      target: "develop-stage"
+      target: "production-stage"
     restart: unless-stopped
     env_file: "./strapi/.env"
     environment:
