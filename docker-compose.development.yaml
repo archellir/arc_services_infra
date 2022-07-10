@@ -4,9 +4,9 @@ services:
     container_name: strapi
     build:
       context: "./strapi"
-      target: "production-stage"
+      target: "development-stage"
     restart: unless-stopped
-    env_file: "./strapi/.env"
+    env_file: "./strapi/.env.development"
     environment:
       DATABASE_CLIENT: ${DATABASE_CLIENT}
       DATABASE_HOST: strapiDB
@@ -33,7 +33,7 @@ services:
   strapiDB:
     image: postgres
     container_name: strapiDB
-    platform: linux/amd64 #for platform error on Apple M1 chips
+    platform: linux/amd64 # for platform error on Apple M1 chips
     restart: unless-stopped
     env_file: "./strapi/.env"
     environment:
