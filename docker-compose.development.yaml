@@ -12,3 +12,7 @@ services:
       - "5432:5432"
     volumes:
       - "arclab-postgres:/var/lib/postgresql/data"
+  blog:
+    build: ../blog.arcbjorn.com
+    ports:
+      - "8000:8000"
