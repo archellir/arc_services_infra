@@ -6,10 +6,12 @@
 
 ```shell
 
+# build
+make build
 # start
-docker-compose -p main -f docker-compose.development.yaml up -d --build --no-cache
+make up
 # stop
-docker-compose -p main -f docker-compose.development.yaml down --rmi local --volumes --remove-orphans
+make down
 ```
 
 ###### Production
