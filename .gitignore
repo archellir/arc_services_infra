@@ -1,1 +1,4 @@
 /content
+
+.env.production
+.env.development
