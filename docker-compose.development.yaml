@@ -20,9 +20,11 @@ services:
 
     build:
       context: "../blog.arcbjorn.com"
+      dockerfile: "../blog.arcbjorn.com/Dockerfile.static"
       target: development
     ports:
-      - "3000:3000"
+      # - "5173:3000" # for adapter-node
+      - "5173:80" # for adapter-static
 
   ghost:
     restart: always
